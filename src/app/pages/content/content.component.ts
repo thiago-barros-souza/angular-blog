@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {dataFake} from '../../data/dataFake'
 
 @Component({
@@ -8,24 +8,25 @@ import {dataFake} from '../../data/dataFake'
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  photoCover:string = ""
-  contentTitle:string = ""
-  contentDescription:string = ""
-  private id:string | null = "0"
+  photoCover: string = ""
+  contentTitle: string = ""
+  contentDescription: string = ""
+  private id: string | null = "0"
 
   constructor(
-    private route:ActivatedRoute
-  ) { }
+    private route: ActivatedRoute
+  ) {
+  }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe( value =>
-     this.id = value.get("id")
+    this.route.paramMap.subscribe(value =>
+      this.id = value.get("id")
     )
 
     this.setValuesToComponent(this.id)
   }
 
-  setValuesToComponent(id:string | null){
+  setValuesToComponent(id: string | null) {
     const result = dataFake.filter(article => article.id == id)[0]
 
     this.contentTitle = result.title

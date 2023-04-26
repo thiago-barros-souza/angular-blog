@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-  margin:0;
-  padding:0;
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  background-color: #111111;
-  color:white;
-  font-family: 'Segoe UI';
+  background-color: #1d0000;
+  color: white;
+  font-family: 'Marvel', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
